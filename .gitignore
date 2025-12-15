@@ -47,3 +47,6 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# Large files
+manuscript/cross_sectional_study_outputs/*
