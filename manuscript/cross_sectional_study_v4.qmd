@@ -1,10 +1,10 @@
 ---
-title: "Cross-sectional seroprevalence study of Lassa fever in three southern Nigerian states"
+title: "Implications of hyper-local Lassa virus transmission heterogeneity for vaccine trial site selection: a cross-sectional study in Nigeria, 2024"
 format: 
   docx:
     reference-doc: reference-doc.docx
 bibliography: references.bib
-csl: emerging-infectious-diseases.csl
+csl: eurosurveillance.csl
 editor: source
 ---
 
@@ -72,40 +72,43 @@ village_state = tibble(abbreviation = c("zug", "dye", "iky", "oki", "oga", "ofo"
 
 ```
 
-# Article Summary Line
-Lassa virus seroprevalence in rural Nigeria exhibits marked village-level heterogeneity, indicating that transmission is driven by hyper-local, household-scale dynamics rather than broad regional risk factors.
-
 # Keywords
 Lassa Fever; Lassa virus; Seroepidemiologic Studies; Zoonoses; Disease Reservoirs; Mastomys; Nigeria; Geography, Medical; Arenaviridae; Cross-Sectional Studies.
 
-# Authors
-David Simons, Christina Harden, Natalie Imirzian, Abi Smith, Katharine Thompson, Nzube Michael Ifebueme, Sunday Eziechina, Helen Ezigbo, Diana Marcus, Fisayomi Aderibigbe, James Koninga, Martin Meremikwu, Lina Moses, Dave Redding, Sagan Friant
-
-# Author Affiliations 
-
-Pennsylvania State University, Pennsylvania, USA (D. Simons, C. Harden, K. Thompson, S. Friant) 
-Cross River Ecohealth Project, Cross River, Nigeria (N.M. Ifebueme, H. Ezigbo, D. Marcus, F. Aderibigbe, J. Koninga) 
-Nigeria Centre for Disease Control, Nigeria (S. Eziechina)  
-University of Calabar, Cross River, Nigeria (M. Meremikwu) 
-Tulane University, Louisiana, USA (L. Moses)  
-Natural History Museum, UK (N. Imirzian, A. Smith, D. Redding)
-
-
 # Abstract
 
-Lassa virus (LASV) transmission varies markedly across West Africa, yet its local drivers are poorly understood. We conducted a cross-sectional study in nine villages across three Nigerian states, testing 1,874 individuals for LASV IgG antibodies and analyzing questionnaire data for correlates of exposure. Overall seroprevalence was 3.3% but was highly heterogeneous, ranging from 1.6% to 5.2% between states. We found no consistent demographic, environmental, or behavioural risk factors, and age-seroprevalence patterns differed markedly between villages. Furthermore, we observed no significant village-wide spatial clustering of seropositive households. Our findings indicate that LASV exposure is driven by complex, hyper-local factors rather than by generalizable risk profiles or geography. This challenges the efficacy of spatially-targeted interventions, supporting instead household-level mitigation strategies and integrated One Health approaches to control this endemic disease.
+Introduction: Lassa virus (LASV) is a WHO priority pathogen with vaccine candidates advancing toward Phase III efficacy trials. Trial success depends on selecting sites with sufficient incidence, yet the local drivers of transmission remain poorly understood. We aimed to assess fine-scale variation in LASV exposure to inform trial site selection and control strategies.
+
+Methods: We conducted a cross-sectional serosurvey in nine rural villages across three Nigerian states (Benue, Ebonyi, Cross River) during 2024. We tested 1,874 individuals for LASV IgG antibodies and analysed questionnaire data using Bayesian hierarchical models to identify demographic, environmental, and behavioural correlates of exposure. Spatial clustering was assessed using local Getis-Ord Gi* statistics.
+
+Results: Overall seroprevalence was 3.3% but exhibited extreme heterogeneity, ranging from 1.7% to 5.1% between states and 0.8% to 6.5% between neighbouring villages. We found no consistent associations between seropositivity and self-reported risk factors, including rodent consumption or agricultural practices. Age-seroprevalence profiles differed markedly between locations, suggesting distinct local transmission histories (endemic vs. epidemic). Furthermore, we observed no significant village-wide spatial clustering of seropositive households.
+
+Discussion: LASV exposure is driven by complex, hyper-local factors that are not captured by broad regional risk mapping. The absence of clear demographic risk profiles challenges the efficacy of spatially targeted interventions based on passive surveillance. For vaccine trial planning, relying on regional notification rates may lead to the selection of sites with insufficient transmission intensity. We recommend granular, active One Health surveillance—integrating human serology with longitudinal reservoir monitoring—to verify local transmission dynamics prior to trial enrolment.
+
+# Key Public Health Messages
+
+## What did you want to address in this study and why?  
+Lassa fever is a dangerous viral disease in West Africa. Scientists are currently developing vaccines, but to prove these vaccines work, they must conduct clinical trials in villages where the virus is actively spreading and cases accrue. We wanted to check if current risk maps—which predict high-risk areas based on broad geography—are accurate enough to help researchers choose the right villages for these important trials.
+
+## What have we learnt from this study? 
+We tested over 1,800 people in rural Nigeria and found that Lassa fever infection rates vary substantially between neighbouring villages. One village might have many past infections (up to 6.5%), while a village just a few kilometres away has almost none (0.8%). Surprisingly, we found that common risk factors, such as farming or eating rodents, did not predict which villages had high infection rates.
+
+What are the implications of your findings for public health? 
+Current broad-scale maps are not detailed enough to predict local risk. If vaccine researchers rely on these maps, they might accidentally choose trial sites with very little virus transmission, leading to trials not reaching clinical endpoints and failing. We recommend that before starting expensive clinical trials, researchers must actively monitor both local people and rodent populations to confirm the virus is circulating in potential trial locations.
 
 # Introduction
 
-Lassa virus (*Mammarenavirus lassaense*; Arenaviridae, LASV) is a zoonotic arenavirus endemic to West Africa, with regular outbreaks occurring in Nigeria, Guinea, Liberia, and Sierra Leone [@garry_lassa_2023]. It causes Lassa fever, a viral haemorrhagic illness responsible for an estimated 900,000 annual infections and over 200 deaths annually in Nigeria alone [@basinskiBridgingGapUsing2021; @nigeriacentrefordiseasecontrolandpreventionLassaFeverOutbreak]. Clinical presentation ranges from asymptomatic infection to severe haemorrhagic fever with case fatality exceeding 20% in hospitalized patients, for whom treatment options remain limited [@kenmoeSystematicReviewMetaanalysis2020a; @salamRibavirinTreatingLassa2022].
+Lassa virus (*Mammarenavirus lassaense*; Arenaviridae, LASV) is a zoonotic arenavirus endemic to West Africa, with regular outbreaks occurring in Nigeria, Guinea, Liberia, and Sierra Leone. It causes Lassa fever, a viral haemorrhagic illness responsible for an estimated 900,000 annual infections and over 200 deaths annually in Nigeria alone [@basinskiBridgingGapUsing2021]. Clinical presentation ranges from asymptomatic infection to severe haemorrhagic fever with case fatality exceeding 20% in hospitalized patients, for whom treatment options remain limited [@salamRibavirinTreatingLassa2022].
 
 The primary reservoir for LASV is *Mastomys natalensis*, a highly fecund, synanthropic rodent widely distributed across sub-Saharan Africa [@bellocqDhatiWelelVirus2020]. It thrives in agricultural and peri-domestic environments, creating substantial opportunities for human contact [@marienHouseholdsHotspotsLassa2020]. Infected rodents, particularly those infected vertically in utero, can become persistent shedders of the virus in excreta, while its fluctuating population dynamics influence seasonal transmission intensity [@hoffmannLassaVirusPersistence2024; @leirsTwentynineYearsContinuous2023].
 
-Humans are expected to become infected through direct or indirect contact with infected rodents, their excreta, contaminated food or aerosolized particles [@bauschLassaFeverGuinea2001]. Occupational and domestic exposures, particularly in farming, food storage, and rodent hunting contexts, are commonly implicated. Critically, seroprevalence surveys show that exposure is widespread, with most infections (~80%) being asymptomatic or subclinical, meaning case counts severely underestimate the true infection burden [@mccormick1987prospective; @simonsLassaFeverCases2022c].
+Human infection occurs primarily through direct or indirect contact with infected rodents, their excreta, contaminated food, or aerosolised particles [@bauschLassaFeverGuinea2001]. Occupational and domestic exposures, particularly in farming, food storage, and rodent hunting contexts, are commonly implicated. Critically, seroprevalence surveys show that exposure is widespread, with most infections (~80%) being asymptomatic or subclinical; consequently, passive surveillance-derived case counts severely underestimate the true infection burden [@simonsLassaFeverCases2022c].
 
 Environmental and ecological conditions strongly influence LASV spillover [@reddingEnvironmentalmechanisticModellingImpact2016]. Land use changes like deforestation and agricultural intensification can increase human-rodent contact, while shifts in rodent community composition may also moderate risk [@banguraLassaVirusCirculation2021; @eskewReservoirDisplacementInvasive2024; @simonsLandUseGradients2025]. Despite these broad-scale drivers, observed variation in LASV prevalence between ecologically similar areas highlights the critical importance of fine-scale factors [@Grant2023-em]. These include social conditions, such as household structure, food storage methods, and specific human-animal interactions.
 
-Current Lassa fever surveillance relies primarily on passive case detection at sentinel hospitals, which overlooks mild infections and asymptomatic seroconversion in the community [@marienSerosurveillanceIdentifiesEndemic2025a]. Consequently, major gaps remain in understanding why transmission risk varies so markedly at local scales, where conditions facilitating spillover are poorly defined [@friantScalingLassaVirus2025]. To address this, we conducted a cross-sectional study in nine communities across three Nigerian states. We combined serological testing with structured questionnaires to investigate fine-scale drivers of exposure. Our objectives were to: 1) estimate LASV seroprevalence at state and village levels; 2) characterize individual and household correlates of seropositivity; and 3) explore spatial heterogeneity in local transmission risk.
+Reliable epidemiological data are urgently needed to support the development of LF therapeutics and vaccines. LASV is a designated priority pathogen for the World Health Organization and the Coalition for Epidemic Preparedness Innovations (CEPI), with multiple vaccine candidates currently advancing into Phase II clinical trials [@malkinSafetyImmunogenicityRVSV2025]. The success of future Phase III efficacy trials relies heavily on identifying hotspot communities where incidence is sufficient to accrue clinical cases to measure a vaccine effect. However, relying on broad-scale incidence data to select these sites risks recruitment failure if transmission is more focal than regional risk maps suggest.
+
+Current Lassa fever surveillance relies primarily on passive case detection at sentinel hospitals, which overlooks mild infections and asymptomatic seroconversion in the community [@marienSerosurveillanceIdentifiesEndemic2025a]. As a result, major gaps remain in understanding why transmission risk varies so markedly at local scales, where the conditions facilitating spillover remain poorly defined [@friantScalingLassaVirus2025]. To address this, we conducted a cross-sectional study in nine communities across three Nigerian states. We combined serological testing with structured questionnaires to investigate fine-scale drivers of exposure. Our objectives were to: 1) estimate LASV seroprevalence at state and village levels; 2) characterise individual and household correlates of seropositivity; and 3) explore spatial heterogeneity in local transmission risk.
 
 # Materials and Methods
 
@@ -117,13 +120,13 @@ This cross-sectional baseline survey was conducted as part of the SCAPES longitu
 
 Households were enumerated to estimate population size and plan recruitment. Villages ranged from 110 to 321 households (population 465–2,313; Supplementary Materials Section 1). We aimed to recruit ~20% of households per village (target ~70), enrolling four individuals per household: an adult male, adult female, adolescent (12–18), and a randomly selected child (<12). Children under 12 provided dried blood spot (DBS) samples but did not complete questionnaires.
 
-Based on published LASV seroprevalence data [@Kerneis2009-sb; @Tobin2015-ic; @Grant2023-em; @marienSerosurveillanceIdentifiesEndemic2025a], we assumed high-risk (>40% seroprevalence), medium-risk (10–20%), and low-risk (<5%) village categories. We estimated that 180 individuals would provide 80% power (α = 0.05, β = 0.2) to detect significant differences in LASV seroprevalence between village categories. Household-level clustering of serostatus was expected; hence, the design was powered to detect differences at both village and household levels.
+Based on published LASV seroprevalence data [@Kerneis2009-sb; @Grant2023-em; @marienSerosurveillanceIdentifiesEndemic2025a], we assumed high-risk (>40% seroprevalence), medium-risk (10–20%), and low-risk (<5%) village categories. We estimated that 180 individuals would provide 80% power (α = 0.05, β = 0.2) to detect significant differences in LASV seroprevalence between village categories. Household-level clustering of serostatus was expected; hence, the design was powered to detect differences at both village and household levels.
 
 Systematic sampling was used to select households within each village. Routes were designed to approach every *n*th household (where *n* is the total number of households divided by the target sample size). Three households (all in BN) declined participation; in these instances, the next household was enrolled. The participant flow diagram is available in Supplementary Materials Section 2.
 
 ## Ethics approval
 
-The study protocol was approved by the Institutional Review Board of the Pennsylvania State University, USA (STUDY00019989), and by the Nigerian National Health Research Ethics Committee (AEC/03/168/24). Additional approval was obtained from the health research ethics committees of the public health agencies in each participating state. Enrollment involved engagement with community leaders. Informed consent was obtained from all adults; assent and parental consent were obtained for minors.
+The study protocol was approved by the Institutional Review Board of the Pennsylvania State University, USA (STUDY00019989), and by the Nigerian National Health Research Ethics Committee (AEC/03/168/24). Additional approval was obtained from the health research ethics committees of the public health agencies in each participating state. The study was conducted in accordance with the Declaration of Helsinki. Enrolment involved engagement with community leaders. Informed consent was obtained from all adults; assent and parental consent were obtained for minors.
 
 ## Data collection
 
@@ -132,10 +135,9 @@ A questionnaire covering demographic, environmental, behavioural, and occupation
 ## Statistical methods
 
 Analyses were performed in R (v4.2.3) [@R]. Questionnaire responses were linked to individual and household records using unique identifiers. Household GPS coordinates were used for spatial analyses. Data cleaning involved range validation, logical consistency checks, and outlier flagging. Missingness was negligible (<1%); analyses were restricted to complete cases.
-
 ### Descriptive group comparisons
 
-To compare characteristics between villages or states, we fitted separate Bayesian models using the `brms` package [@brms] (Gaussian linear models for continuous variables; multinomial logistic regression for categorical). We defined a notable difference between groups as evidence that the variability of the outcome between villages/states was non-zero. This was assessed by examining the posterior distribution of the random effect standard deviation (SD) parameter for the grouping variable. A notable difference was concluded if the 95% Credible Interval (CrI) for the SD parameter excluded zero.
+To compare characteristics between villages or states, we fitted separate Bayesian models using the `brms` package [@brms] (Gaussian linear models for continuous variables; multinomial logistic regression for categorical). We defined a notable difference between groups as evidence that the variability of the outcome between villages/states was non-zero. This was assessed by examining the posterior distribution of the random effect standard deviation (SD) parameter for the grouping variable. A notable difference was concluded if the lower bound of the 95% Credible Interval (CrI) for the SD parameter was >0.1, indicating non-negligible variation.
 
 ### Estimating LASV seroprevalence
 
@@ -372,7 +374,7 @@ tbl_1_final_revised
 
 ## Individuals
 
-Demographics and behaviors varied notably across sites (Table 2). Migration patterns differed (Strong Evidence); the percentage of residents born in their current village was substantially lower in BN compared to CR. However, most participants were permanent residents (median 12 months/year).  A balanced distribution by sex was achieved by the sampling design for all sites. Median age (Overall: 28, IQR: 31) was consistent across villages.
+Demographics and behaviours varied notably across sites (Table 2). Migration patterns differed (Strong Evidence); the percentage of residents born in their current village was substantially lower in BN compared to CR. However, most participants were permanent residents (median 12 months/year).  A balanced distribution by sex was achieved by the sampling design for all sites. Median age (Overall: 28, IQR: 31) was consistent across villages.
 
 Educational attainment varied substantialy; participants in BN and CR had higher rates of secondary education completion compared to EB. Subsistence farming was the most common occupation (59%), followed by trading (17%) and hired agricultural work (6%). Primary occupations did not show strong evidence of difference between villages.
 
@@ -460,20 +462,35 @@ bayesian_results_individual <- list(
 #| warning: false
 #| tbl-cap: "Individual-level demographic, occupational, and behavioral characteristics"
 
-tbl_2_summary_input_main <- tbl_2_data_processed |>
+tbl_2_summary_input_condensed <- tbl_2_data_processed |>
   drop_na(interpretation, age, sex) |>
-  mutate(education_four_levels = case_when(str_detect(education, "None") ~ "None",
-                                           str_detect(education, "Primary") ~ "Primary",
-                                           str_detect(education, "Junior|Senior") ~ "Secondary",
-                                           str_detect(education, "University|Master|Other") ~ "Post-secondary",
-                                           is.na(education) ~ NA),
-         education_four_levels = factor(education_four_levels, levels = c("None", "Primary", "Secondary", "Post-secondary")),
-         excreta_cleaning = case_when(is.na(excreta_cleaning) & age >= 12 ~ "No",
-                                      is.na(excreta_cleaning) ~ NA,
-                                      TRUE ~ "Yes")) |>
+  mutate(
+    # Merge Equivocal into Negative
+    interpretation = case_when(
+      interpretation == "Equivocal" ~ "Negative",
+      TRUE ~ interpretation
+    ),
+    # Simplify Education
+    education_four_levels = case_when(
+      str_detect(education, "None") ~ "None",
+      str_detect(education, "Primary") ~ "Primary",
+      str_detect(education, "Junior|Senior") ~ "Secondary",
+      str_detect(education, "University|Master|Other") ~ "Post-secondary",
+      is.na(education) ~ NA_character_
+    ),
+    education_four_levels = factor(education_four_levels, levels = c("None", "Primary", "Secondary", "Post-secondary")),
+    # Handle Excreta Cleaning logic
+    excreta_cleaning = case_when(
+      is.na(excreta_cleaning) & age >= 12 ~ "No",
+      is.na(excreta_cleaning) ~ NA_character_,
+      TRUE ~ "Yes"
+    )
+  ) |>
   select(
     village_residence,
-    interpretation, age, sex,
+    interpretation, 
+    age, 
+    sex,
     education_four_levels,
     community_pob,
     farming, ag_worker, trader,
@@ -482,8 +499,8 @@ tbl_2_summary_input_main <- tbl_2_data_processed |>
     excreta_cleaning  
   )
 
-individual_summary_main <- tbl_summary(
-  data = tbl_2_summary_input_main,
+individual_summary_condensed <- tbl_summary(
+  data = tbl_2_summary_input_condensed,
   by = village_residence,
   statistic = list(
     all_continuous() ~ "{median} ({IQR})",
@@ -491,14 +508,26 @@ individual_summary_main <- tbl_summary(
   ),
   digits = list(all_continuous() ~ 0),
   missing = "no",
+  # Value labels to filter specific rows (e.g., only show Female)
+  value = list(
+    sex ~ "Female",
+    community_pob ~ "Yes",
+    farming ~ "1",
+    ag_worker ~ "1",
+    trader ~ "1",
+    current_rodent_consumption ~ "Yes",
+    past_rodent_consumption ~ "Yes",
+    excreta_cleaning ~ "Yes",
+    interpretation ~ "Positive"
+  ),
   label = list(
-    interpretation ~ "LASV serology",
+    interpretation ~ "LASV Seropositive",
     age ~ "Age (years)",
-    sex ~ "Sex",
+    sex ~ "Sex: Female",
     education_four_levels ~ "Education*",
     community_pob ~ "Born in study village*",
-    farming ~ "Occupation: Farming (own land)",
-    ag_worker ~ "Occupation: Agricultural work (hired)",
+    farming ~ "Occupation: Farmer",
+    ag_worker ~ "Occupation: Agricultural worker",
     trader ~ "Occupation: Trader",
     current_rodent_consumption ~ "Rodent consumption*",
     past_rodent_consumption ~ "Past rodent consumption only*",
@@ -517,48 +546,35 @@ pop_row <- tibble(
   label = "Estimated village population",
   n = NA_character_,
   stat_0 = NA_character_,
-  stat_1 = "1,227 (15%)",
-  stat_2 = "930 (23%)",
-  stat_3 = "2,242 (9%)",
-  stat_4 = "1,196 (21%)",
-  stat_5 = "1,401 (16%)",
-  stat_6 = "464 (40%)",
-  stat_7 = "2,125 (11%)",
-  stat_8 = "1,790 (12%)",
-  stat_9 = "2,310 (9%)"
+  stat_1 = "1,227 (15%)", stat_2 = "930 (23%)", stat_3 = "2,242 (9%)", # BN
+  stat_4 = "1,196 (21%)", stat_5 = "1,401 (16%)", stat_6 = "464 (40%)",  # CR
+  stat_7 = "2,125 (11%)", stat_8 = "1,790 (12%)", stat_9 = "2,310 (9%)"  # EB
 )
 
-individual_summary_main$table_body <- bind_rows(pop_row, individual_summary_main$table_body)
+individual_summary_condensed$table_body <- bind_rows(pop_row, individual_summary_condensed$table_body)
 
-tbl_2_final_revised <- individual_summary_main |>
+# 4. Final Formatting (Eurosurveillance Style)
+tbl_2_final_condensed <- individual_summary_condensed |>
   modify_header(label ~ "**Characteristic**") |>
   bold_labels() |>
-  modify_spanning_header(c("stat_1", "stat_2", "stat_3") ~ "**Benue [BN]**",
-                         c("stat_4", "stat_5", "stat_6") ~ "**Cross River [CR]**",
-                         c("stat_7", "stat_8", "stat_9") ~ "**Ebonyi [EB]**") |>
-  modify_footnote_body(
-    footnote = "*Indicates strong evidence of a difference between villages, as determined by a Bayesian hierarchical model. See supplementary for central estimates and 95% CrI.",
-    columns = label,
-      rows = str_detect(label, "\\*") 
+  modify_spanning_header(
+    c("stat_1", "stat_2", "stat_3") ~ "**Benue [BN]**",
+    c("stat_4", "stat_5", "stat_6") ~ "**Cross River [CR]**",
+    c("stat_7", "stat_8", "stat_9") ~ "**Ebonyi [EB]**"
   ) |>
   modify_footnote_body(
-    footnote = "% refers to proportion of individuals enrolled from all individuals in the village",
+    footnote = "*Indicates strong evidence of a difference between villages (Bayesian hierarchical model).",
     columns = label,
-    rows = label == "Estimated village population"
+    rows = str_detect(label, "\\*") 
   ) |>
   as_gt() |>
   gt::tab_style(
     style = gt::cell_fill(color = "lightgrey"),
-    locations = gt::cells_body(columns = c("stat_1", "stat_2", "stat_3",
-                                           "stat_7", "stat_8", "stat_9"))
-  ) |>
-  gt::tab_source_note(
-    source_note = "Note: Analysis restricted to individuals with complete questionnaire and serology data. 69 individuals were excluded due to missing serological results."
+    locations = gt::cells_body(columns = c("stat_1", "stat_2", "stat_3", "stat_7", "stat_8", "stat_9"))
   ) |>
   tab_options(table_body.vlines.style = "none")
 
-tbl_2_final_revised
-
+tbl_2_final_condensed
 ```
 
 
@@ -587,24 +603,40 @@ age_seroprevalence_data <- readRDS(here(output_dir, "age_seroprevalence_data.rds
 
 village_agg_ns <- serodata |>
   mutate(abbreviation = str_split(id, pattern = "-", simplify = TRUE)[, 1],
-         y = case_when(interpretation == "Positive" ~ 1,
-                       TRUE ~ 0)) |>
+         y = case_when(interpretation == "Positive" ~ 1, TRUE ~ 0)) |>
   left_join(village_state, by = "abbreviation") |>
   group_by(village) |>
-  summarise(`N sampled` = n(), `N positive` = sum(y, na.rm = TRUE))
+  summarise(
+    `N sampled` = n(), 
+    `N positive` = sum(y, na.rm = TRUE),
+    .groups = "drop"
+  ) |>
+  rename(Group = village)
 
-state_agg_ns <- serodata |>
-  mutate(abbreviation = str_split(id, pattern = "-", simplify = TRUE)[, 1],
-         y = case_when(interpretation == "Positive" ~ 1,
-                       TRUE ~ 0)) |>
-  left_join(village_state, by = "abbreviation") |>
+state_agg_ns <- village_agg_ns |>
+  mutate(state = case_when(
+    Group %in% c("Dyegh", "Ikyogbakpev", "Zugu") ~ "Benue",
+    Group %in% c("Ofonekom", "Ogamanna", "Okimbongha") ~ "Cross River",
+    Group %in% c("Enyandulogu", "Ezeakataka", "Offianka") ~ "Ebonyi"
+  )) |>
   group_by(state) |>
-  summarise(`N sampled` = n(), `N positive` = sum(y, na.rm = TRUE))
+  summarise(
+    `N sampled` = sum(`N sampled`), 
+    `N positive` = sum(`N positive`),
+    .groups = "drop"
+  ) |>
+  rename(Group = state)
+
+all_ns <- bind_rows(village_agg_ns, state_agg_ns)
 
 combined_draws <- bind_rows(
   village_prevalence_draws |> rename(Group = village) |> mutate(level = "village"),
   state_prevalence_draws   |> rename(Group = state)   |> mutate(level = "state")
-)
+) |>
+  mutate(Group = case_when(
+    str_detect(Group, "CrossRiver") ~ "Cross River",
+    TRUE ~ Group
+  ))
 
 table_3_input <- combined_draws |>
   group_by(Group, level) |>
@@ -614,19 +646,12 @@ table_3_input <- combined_draws |>
     upper_ci = quantile(prevalence * 100, 0.975),
     .groups = "drop"
   ) |>
-  # Format the summary columns
+  left_join(all_ns, by = "Group") |>
   mutate(
-    `Prevalence (%)` = round(median_prevalence, 2),
-    `95% CrI` = paste0(round(lower_ci, 2), " - ", round(upper_ci, 2)),
-    Group = case_when(str_detect(Group, "CrossRiver") ~ "Cross River",
-                      TRUE ~ Group)
-  ) |>
-  # Join the sample size info
-  left_join(
-    bind_rows(
-      village_agg_ns |> rename(Group = village),
-      state_agg_ns   |> rename(Group = state)
-    ), by = "Group"
+    `Pos` = `N positive`,
+    `Prev` = median_prevalence,
+    `Low` = lower_ci,
+    `High` = upper_ci
   )
 
 display_order <- c(
@@ -638,17 +663,26 @@ display_order <- c(
 gt_table_revised <- table_3_input |>
   mutate(Group = factor(Group, levels = display_order)) |>
   arrange(Group) |>
-  select(Group, level, `N sampled`, `N positive`, `Prevalence (%)`, `95% CrI`) |>
+  select(Group, level, `N sampled`, `Pos`, `Prev`, `Low`, `High`) |>
   gt() |>
   cols_label(
     Group = "State/Village",
-    `95% CrI` = "95% CrI"
+    `N sampled` = "N",
+    `Pos` = "n",
+    `Prev` = "%",
+    `Low` = "Lower",
+    `High` = "Upper"
   ) |>
+  tab_spanner(label = "Seropositive", columns = c(`Pos`, `Prev`)) |>
+  tab_spanner(label = "95% CrI", columns = c(`Low`, `High`)) |>
+  fmt_number(columns = c(`Prev`, `Low`, `High`), decimals = 2) |>
   cols_align(align = "left", columns = Group) |>
+  # Bold State Rows
   tab_style(
     style = cell_text(weight = "bold"),
     locations = cells_body(columns = Group, rows = level == "state")
   ) |>
+  # Indent Village Rows
   tab_style(
     style = cell_text(indent = px(20)),
     locations = cells_body(columns = Group, rows = level == "village")
@@ -690,7 +724,7 @@ age_seroprev <- age_seroprevalence_data |>
   theme_minimal() +
   facet_grid(~ state, scales = "fixed")
 
-save_plot(plot = age_seroprev, filename = here("output", "figure_1.png"), base_width = 8, bg = "white")
+save_plot(plot = age_seroprev, filename = here("output", "figure_1.pdf"), base_width = 8, bg = "white")
 
 ```
 
@@ -730,7 +764,7 @@ trend_check <- age_seroprevalence_data |>
 #| fig.cap: "Village-specific age-seroprevalence curves for Lassa virus. Lines represent median posterior estimates from a generalized additive model, and ribbons show the 95% credible interval."
 #| echo: false
 
-knitr::include_graphics(here("output", "figure_1.png"))
+knitr::include_graphics(here("output", "figure_1.pdf"))
 
 ```
 
@@ -848,7 +882,7 @@ main_plot_figure <- main_plot_data |>
       strip.text.y = element_text(angle = 0)
     )
 
-save_plot(filename = here("output", "figure_2.png"), plot = main_plot_figure, base_width = 7, base_height = 6)
+save_plot(filename = here("output", "figure_2.pdf"), plot = main_plot_figure, base_width = 7, base_height = 6)
 
 ```
 
@@ -857,7 +891,7 @@ save_plot(filename = here("output", "figure_2.png"), plot = main_plot_figure, ba
 #| fig-cap: "Forest plot of univariable odds ratios for Lassa virus seropositivity. Points are posterior medians, and horizontal bars are 95% credible intervals, adjusted for clustering by village."
 #| echo: false
 
-knitr::include_graphics(here("output", "figure_2.png"))
+knitr::include_graphics(here("output", "figure_2.pdf"))
 ```
 
 ### Demographic correlates of LASV seropositivity
@@ -878,7 +912,7 @@ No clear associations were found for household-level variables such as household
 
 final_spatial_plot <- read_rds(file = here("output", "spatial_analysis", "spatial_plot.rds"))
 
-save_plot(here("output", "figure_3.png"), plot = final_spatial_plot, base_width = 12, base_height = 12)
+save_plot(here("output", "figure_3.pdf"), plot = final_spatial_plot, base_width = 12, base_height = 12)
 ```
 
 ```{r}
@@ -887,7 +921,7 @@ save_plot(here("output", "figure_3.png"), plot = final_spatial_plot, base_width 
 #| echo: false
 #| warning: false
 
-knitr::include_graphics(here("output", "figure_3.png"))
+knitr::include_graphics(here("output", "figure_3.pdf"))
 ```
 
 We assessed the spatial clustering of LASV seropositivity at the household level across nine villages. Global spatial autocorrelation, assessed using Moran’s I, found no evidence of significant village-wide clustering in any site (all *p* > 0.05). Localised clustering was then evaluated using the Getis-Ord Gi* statistic, which identified a total of 27 hotspot and 6 coldspot households across all villages (Figure 3). However, these statistical clusters did not align well with observed seropositivity; of the 59 seropositive households in the study, only 3.6% were located within a designated hotspot.
@@ -900,7 +934,7 @@ This study found that LASV exposure in rural Nigeria was substantially lower tha
 
 Our seroprevalence estimates are comparable to those from some contemporary studies in West Africa, though such comparisons are conditioned by differences in study populations and laboratory methods [@Grant2023-em; @lerchProjectingVaccineDemand2022]. The high specificity of the commercial ELISA kit (LASV vs. non-LASV arenaviruses) used in this study may yield more conservative estimates than alternative serological assays [@Soubrier2022-gr]. More revealing was the relationship with age. Two villages exhibited classic increasing seroprevalence with age, indicative of cumulative, endemic transmission. Conversely, two others showed peaks in younger groups, suggesting dynamic local transmission [@haySerodynamicsPrimerSynthetic2024]. 
 
-Peaks in younger age groups could arise from recent increases in transmission or immunological factors like seroreversion. With antibody waning estimated at ~3% annually [@mooreEstimationLassaFever2025], the decline in older cohorts likely reflects the loss of detectable markers from historical infections. This implies that cross-sectional seroprevalence may serve only as a moving window of recent exposure (e.g., the last 15–20 years) rather than a cumulative record of lifetime risk. Consequently, the distinct peak in younger age groups observed in villages like Okimbongha [CR] likely signals intense, recent transmission events concentrated in younger cohorts, while the low prevalence in older adults reflects both lower recent exposure and the decay of historical antibodies.
+Peaks in younger age groups could arise from recent increases in transmission or immunological factors like seroreversion. With antibody waning estimated at ~3% annually [@mooreEstimationLassaFever2025], the decline in older cohorts likely reflects the loss of detectable markers from historical infections. This implies that cross-sectional seroprevalence may serve only as a moving window of recent exposure (e.g., the last 15–20 years) rather than a cumulative record of lifetime risk. Consequently, the distinct peak in younger age groups observed in villages like Okimbongha [CR] likely signals intense, recent transmission events concentrated in younger cohorts, while the low prevalence in older adults reflects both lower recent exposure and the decay of historical antibodies. From a trial planning perspective, these communities with steep age-seroprevalence gradients in younger cohorts likely represent the most viable candidates for efficacy studies, as they indicate active, ongoing viral circulation (high force of infection) rather than historical exposure.
 
 Consistent with this theme of local heterogeneity, our univariable analyses revealed no strong or consistent demographic, environmental, or occupational correlates of seropositivity. The lack of clear associations with commonly cited risks, such as farming, contrasts with some previous findings [@ogundeleLassaFeverWest2025]. This may be a function of the study's limited statistical power, a consequence of the low overall seroprevalence, to detect modest individual-level effects. Furthermore, the near-universal reporting of certain exposures, such as the presence of rodents in homes (94%), creates little variability. This complicates the quantification of their true impact, particularly as risk is ultimately driven by the prevalence of LASV within local rodent populations, which itself can be highly variable, again highlighting the heterogeneous nature of risk [@marienHouseholdsHotspotsLassa2020; @banguraLassaVirusCirculation2021]. 
 
@@ -910,15 +944,19 @@ Collectively, these findings suggest a departure from a uniform transmission mod
 
 ## Strengths and Limitations
 
-The strengths of this study include its systematic, multi-criteria site selection; a large sample size across diverse communities; and a robust analytical framework using Bayesian mixed models to account for data hierarchies and uncertainty. The inclusion of formal spatial statistics adds rigor to our conclusion that transmission is not strongly clustered at the household level. Nevertheless, the study has important limitations. It was powered to detect village-level differences based on higher seroprevalence estimates from previous studies; however, the observed low seroprevalence limited our power for individual-level risk factor analysis. The cross-sectional design precludes assessment of causality and the distinction between recent and past infections. This challenge is compounded by the potential for antibody waning and sero-reversion, the rates of which are critical for accurate Force of Infection estimation but remain poorly understood for LASV. Furthermore, the measurement of behaviour and environment at a single cross-sectional point may not accurately reflect cumulative lifetime exposure, as housing and habits vary over time. Finally, reliance on self-reported behaviours is subject to recall bias, and the study lacked objective ecological measures, such as rodent abundance data.
+The strengths of this study include its systematic, multi-criteria site selection; a large sample size across diverse communities; and a robust analytical framework using Bayesian mixed models to account for data hierarchies and uncertainty. The inclusion of formal spatial statistics adds rigor to our conclusion that transmission is not strongly clustered at the household level. Nevertheless, the study has important limitations. It was powered to detect village-level differences based on higher seroprevalence estimates from previous studies; however, the observed low seroprevalence limited our power for individual-level risk factor analysis. 
+
+The cross-sectional design precludes assessment of causality and the distinction between recent and past infections. Consequently, while baseline seroprevalence is a superior screening tool compared to regional risk maps, it remains a proxy for true incidence. Ideally, serosurveys should be used to stratify villages for subsequent prospective incidence studies. This challenge is compounded by the potential for antibody waning and sero-reversion, the rates of which are critical for accurate Force of Infection estimation but remain poorly understood for LASV. Furthermore, the measurement of behaviour and environment at a single cross-sectional point may not accurately reflect cumulative lifetime exposure, as housing and habits vary over time. Finally, reliance on self-reported behaviours is subject to recall bias, and the study lacked objective ecological measures, such as rodent abundance data.
 
 ## Public Health Implications and Future Directions
 
-Our findings have significant implications for LASV control. The absence of spatial clustering and a clear risk profile suggests geographically-targeted interventions may be inefficient. Public health efforts should prioritize broadly-deployed, household-level interventions (e.g., rodent-proofing) and maintain high suspicion in surveillance across all villages within endemic regions, not just sentinel sites. Surveillance must also include areas of previously low-predicted risk (e.g., cold spots) given the observed micro-heterogeneity. Future research must employ a One Health approach, leveraging data from our ongoing longitudinal rodent sampling [@friantScalingLassaVirus2025]. Ultimately, disentangling these patterns requires longitudinal cohort studies linking exposures with seroconversion.
+The absence of spatial clustering and a clear risk profile suggests that geographically-targeted interventions may be inefficient. Furthermore, these findings highlight a critical vulnerability in the planning of Phase III vaccine efficacy trials. Our data demonstrate that being located within a high-risk state or Local Government Area does not guarantee high local exposure. Consequently, trial sites selected based on regional notification rates may inadvertently target villages with insufficient transmission intensity to demonstrate vaccine efficacy. To mitigate this risk, clinical trial site selection must adopt a One Health approach, moving beyond passive surveillance data to incorporate granular, active human serosurveys alongside prospective, longitudinal monitoring of rodent reservoirs. This integrated strategy ensures that trials are enrolled in locations where the virus is demonstrably circulating in the animal host, thereby maximising the likelihood of capturing spillover events.
+
+Public health efforts should prioritize broadly-deployed, household-level interventions (e.g., rodent-proofing) and maintain high suspicion in surveillance across all villages within endemic regions, not just sentinel sites. Surveillance must also include areas of previously low-predicted risk (e.g., cold spots) given the observed micro-heterogeneity. Future research must employ a One Health approach, leveraging data from our ongoing longitudinal rodent sampling [@friantScalingLassaVirus2025]. Ultimately, disentangling these patterns requires longitudinal cohort studies linking exposures with seroconversion.
 
 ## Conclusion
 
-LASV exposure in rural Nigeria is highly variable and likely driven by complex, hyper-local factors. Effective control requires shifting from universal risk factors toward adaptable, household-focused interventions and integrated surveillance responding to unique local contexts.
+LASV exposure in rural Nigeria is highly variable and likely driven by complex, hyper-local factors. These findings caution against reliance on broad-scale risk mapping for public health planning. Effective control requires shifting toward adaptable, household-focused interventions and, critically, the adoption of granular, One Health surveillance strategies to accurately identify high-transmission sites for clinical research and vaccine deployment.
 
 # Acknowledgments
 
